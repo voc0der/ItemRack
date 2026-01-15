@@ -940,7 +940,7 @@ function ItemRackOpt.BindSet()
 	local setname = ItemRackOptSetsName:GetText()
 	ItemRackOpt.Binding = { type="Set", name="Set \""..setname.."\"", buttonName="ItemRack"..UnitName("player")..GetRealmName()..setname }
 	ItemRackOpt.Binding.button = _G[buttonName] or CreateFrame("Button",ItemRackOpt.Binding.buttonName,nil,"SecureActionButtonTemplate")
-	
+	ItemRackOpt.Binding.button:RegisterForClicks("AnyUp")
 	ItemRackOptBindFrame:Show()	
 end
 
