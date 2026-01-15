@@ -4,6 +4,16 @@ _G[addonName] = addon
 local _
 
 local wowver, wowbuild, wowbuilddate, wowtoc = GetBuildInfo()
+
+-- Fix for TBC: AddOn API functions moved to C_AddOns namespace
+local GetAddOnMetadata = GetAddOnMetadata
+local LoadAddOn = LoadAddOn
+local EnableAddOn = EnableAddOn
+if not GetAddOnMetadata and C_AddOns then
+    GetAddOnMetadata = C_AddOns.GetAddOnMetadata
+    LoadAddOn = C_AddOns.LoadAddOn
+    EnableAddOn = C_AddOns.EnableAddOn
+end
 ItemRack.Version = GetAddOnMetadata(addonName, "Version")
 
 -- by Mikinho - Fix for latest update for Classic Era/SoD v11504

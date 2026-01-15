@@ -1,3 +1,9 @@
+-- Fix for TBC: AddOn API functions moved to C_AddOns namespace
+local LoadAddOn = LoadAddOn
+if not LoadAddOn and C_AddOns then
+    LoadAddOn = C_AddOns.LoadAddOn
+end
+
 ItemRack.Docking = {} -- temporary table for current docking potential
 
 ItemRack.BracketInfo = { ["TOP"] = {36,12,.25,.75,0,.25}, -- bracket construction info
