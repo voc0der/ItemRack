@@ -4,7 +4,7 @@
 ## Interface-Wrath: 30403
 ## Interface-Cata: 40401
 ## Title: ItemRack - Classic
-## Version: 4.25
+## Version: 4.26
 ## Author: Gello - Updated for Classic by Rottenbeer,Roadblock
 ## SavedVariables: ItemRackSettings, ItemRackItems, ItemRackEvents
 ## SavedVariablesPerCharacter: ItemRackUser

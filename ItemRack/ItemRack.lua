@@ -2091,7 +2091,7 @@ function ItemRack.SetSetBindings()
 			if ItemRackUser.Sets[i].key then
 				buttonName = "ItemRack"..UnitName("player")..GetRealmName()..i
 				button = _G[buttonName] or CreateFrame("Button",buttonName,nil,"SecureActionButtonTemplate")
-				button:RegisterForClicks("AnyUp")
+				button:RegisterForClicks("AnyUp", "AnyDown")
 				button:SetAttribute("type","macro")
 				local macrotext = "/script ItemRack.RunSetBinding(\""..i.."\")\n"
 				for slot = 16, 18 do
